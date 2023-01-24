@@ -1,0 +1,37 @@
+﻿@page
+@model Moment_1._1.Pages.RazorModel
+@{
+    ViewData["Title"] = "Razor";
+    var date = DateTime.Now;
+    var dayOfWeek = DateTime.Today.DayOfWeek;
+    var displayDay = "";
+    if (dayOfWeek == DayOfWeek.Monday)
+    {
+        displayDay = "Idag är det måndag";
+    } else
+    {
+        displayDay = "Idag är det inte måndag";
+    }
+    string[] allCourses = { "DT057G	Webbutveckling I", "DT093G	Webbutveckling II", "DT084G	Introduktion till programmering i JavaScript", "DT068G	Webbanvändbarhet", "DT003G	Databaser", "DT152G	Webbdesign för CMS", "DT173G Webbutveckling III", "DT193G, Fullstack-utveckling med ramverk", "IK060G Projektledning" };
+    List<string> courses = new List<string>();
+    courses.AddRange(allCourses);
+
+}
+
+<div>
+    <h1 class="display-4">Razor</h1>
+    <h2>Information</h2>
+    <b>Datum/klockslag:</b> @date
+    <p>
+    @displayDay
+    </p>
+    <h2>Kurser jag läst:</h2>
+    <ul>
+        @{
+            foreach (string a in courses)
+            {
+                <li>@a</li>
+            }
+        } 
+    </ul>
+</div>

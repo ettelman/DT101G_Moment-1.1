@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Moment 1.1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Moment_1._1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="grid-top">
+            <div class="cell">
+        <img src="~/mom1.png" alt="Logotyp för moment1" class="logo"/>
+            </div>
+            <div class="cell right">
+                <p class="box-top">Dagens datum är: @DateTime.Now </p>
+            </div>
+        </div>
+    </header>
+    <div class="grid-center">
+        <div class="cell border-basic">
+        <nav>
+ 
+                
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Startsida</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">Om sidan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Razor">Razor</a>
+                        </li>
+                    </ul>
+             
+            
+        </nav>
+        </div>
+    <div class="border-basic padding-basic">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    </div>
+    <footer class="border-basic footer">
+        <div class="container">
+            Av: Björn Ettelman - Kontakta mig via e-post: <a href="mailto:bjet2100@student.miun.se">bjet2100@student.miun.se</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
