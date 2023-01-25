@@ -1,4 +1,9 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// JS för moment 1.1
 
-// Write your JavaScript code.
+
+
+function showStart() {
+    document.querySelector('#start').style.height = "500px";
+}
+
+window.onload = showStart(); 

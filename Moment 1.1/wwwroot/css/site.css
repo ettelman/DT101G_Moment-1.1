@@ -66,3 +66,8 @@ footer {
         min-height: 0;
     }
 }
+#start {
+    height: 0px;
+    transition: height 2s;
+    overflow: hidden;
+}
